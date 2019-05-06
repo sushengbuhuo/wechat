@@ -65,10 +65,15 @@
                 var content = ele.content;
                 var timestamp = ele.timestamp;
                 var mediaFile = ele.mediaFile;
+                var content_url = $($.parseXML(ele.rawXML)).find('TimelineObject').find('ContentObject').find('contentUrl').text();
                 var snsContainer = $("<div/>", {class: "snsContainer"});
                 var imagesContainer = $("<div/>", {class: "imagesContainer"});
+                content = content ? content : $($.parseXML(ele.rawXML)).find('TimelineObject').find('ContentObject').find('title').text();
+                if (content_url) {
+                    content = '<a href='+content_url+' target=_blank>'+content+'</a>';
+                }
                 $("<div/>", {class: "authorName"}).text(authorName).appendTo(snsContainer);
-                $("<div/>", {class: "content"}).text(content).appendTo(snsContainer);
+                $("<div/>", {class: "content"}).html(content).appendTo(snsContainer);
                 mediaFile.forEach(media => {
                     var imgContainer = $("<a/>", {class: "imgContainer"});
                     imgContainer

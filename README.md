@@ -1,4 +1,4 @@
-本项目可以将备份好的朋友圈在网页浏览(截至2019.3.6)
+本项目可以将备份好的朋友圈在网页浏览(截至2019.3.6共457条朋友圈)
 
 ## 使用说明
 目录结构如下：
@@ -34,7 +34,7 @@ python word.py
 然后 `outputs` 目录下生成 `word.png`
 ![](./outputs/word.png)
 ### 问题
-转发的朋友圈如果没有文字，将显示空，因为转发链接没有获取到。
+摇一摇分享的歌曲无法打开，小视频无法打开。
 
 ### 感谢
 [👉不知道朋友圈备份文件哪来？](https://mp.weixin.qq.com/s?__biz=Mzg4MDExMTUwMw==&mid=2247483679&idx=1&sn=12f73bf7f92f94b12ec057e64913b0f8&chksm=cf7b7bfff80cf2e9afa369117e5da5733854f4823e70dddce64a5537a7de3c24bb1b121727cb&token=1469653834&lang=zh_CN#rd)

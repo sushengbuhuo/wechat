@@ -59,7 +59,7 @@
             return date.toLocaleString();
         }
 
-        $.getJSON("./datas/data.json", function (data) {
+        $.getJSON("datas/data.json", function (data) {
             data.forEach(ele => {
                 var authorName = ele.authorName;
                 var content = ele.content;
@@ -74,9 +74,9 @@
                     imgContainer
                         .attr('data-fancybox', 'gallery')
                         .attr('data-caption', content)
-                        .attr('href', "./datas/" + media+".jpg");
+                        .attr('href', "datas/" + media+".jpg");
                     $("<div/>", {class: "media"})
-                        .css('background-image', "url('" + "./datas/" + media +".jpg')")
+                        .css('background-image', "url('" + "datas/" + media +".jpg')")
                         .appendTo(imgContainer);
                     imgContainer.appendTo(imagesContainer);
                     console.log(media);
